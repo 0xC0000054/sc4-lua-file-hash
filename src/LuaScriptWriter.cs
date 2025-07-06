@@ -133,7 +133,8 @@ namespace SC4LuaFileHash
                                 }
                             }
                         }
-                        else if (line.StartsWith("--") && line.EndsWith(".lua"))
+                        else if (line.StartsWith("--", StringComparison.Ordinal)
+                              && line.EndsWith(".lua", StringComparison.OrdinalIgnoreCase))
                         {
                             // Handle '-- file.lua' comments.
 
